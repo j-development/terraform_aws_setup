@@ -1,0 +1,5 @@
+terraform.tfvars
+keys/*
+terraform_backend_setup/*
+!terraform_backend_setup/backend_resources.tf
+.terraform
