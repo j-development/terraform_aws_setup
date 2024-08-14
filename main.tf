@@ -67,16 +67,15 @@ resource "aws_route_table" "public" {
   }
 }
 # Route Table Association
-resource "aws_route_table_association" "public" {
+resource "aws_route_table_association" "rta1" {
   subnet_id      = aws_subnet.subnet1.id
   route_table_id = aws_route_table.public.id
 }
 
-resource "aws_route_table_association" "private" {
+resource "aws_route_table_association" "rta2" {
   subnet_id      = aws_subnet.subnet2.id
   route_table_id = aws_route_table.public.id
 }
-
 
 resource "aws_key_pair" "ss1keys" {
   key_name   = "ss1keys"
